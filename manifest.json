@@ -1,0 +1,28 @@
+{
+   "manifest_version": 2,
+	"name":		"price",
+	"version":	"0.0.1",
+	"description":	"显示美餐价格",
+	"permissions": [
+		"https://meican.com/*"
+	],
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	 "page_action": {
+		"default_icon": {
+      "19":"icon.png",
+      "38":"icon.png"
+    },
+    "default_title": "美餐价格",
+		"popup": "index.html"
+	  },
+	"content_scripts": [{
+		"matches": ["https://meican.com/*"],
+		"js": ["script.js"],
+		"run_at": "document_idle"
+	}],
+	"web_accessible_resources": ["*"]
+}
