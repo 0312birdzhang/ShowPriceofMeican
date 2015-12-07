@@ -1,3 +1,12 @@
 setInterval(function(){
-	$(".price").each(function(){$(this).text($(this).parent().parent().parent().parent().attr("data-price")+"元");})
+	$(".dish-price.dish-free").each(
+		function(){
+			$(this).hide();
+		}
+	)
+	$(".dish-price.ng-binding.ng-hide").each(
+		function(){
+			$(this).attr('class','dish-price');
+			}
+	 )
 },1000)
